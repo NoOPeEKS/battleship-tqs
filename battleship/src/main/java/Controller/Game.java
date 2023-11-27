@@ -237,6 +237,11 @@ public class Game {
         System.out.println("Tens " + p.numBoatsLeftToSet() + " vaixells per col·locar.");
     }
 
+    // Mètode getter per accedir al mètode convertLetterToInt() per poder fer testing.
+    public int accessConvertLetterToInt(String input){
+        return convertLetterToInt(input);
+    }
+
     // Mètode per convertir la selecció de la fila d'un jugador i convertir-lo a la integer correcta.
     private static int convertLetterToInt(String input) {
         int toReturn = -1;

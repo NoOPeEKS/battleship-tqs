@@ -67,8 +67,8 @@ public class Board {
     }
 
     public void setShip(int row, int col, boolean val) { board[row][col].setShip(val);}
-    public void setLengthOfBoat(int row, int col, int length){ board[row][col].setLengthOfShip(length); }
-    public void setDirectionOfBoat(int row, int col, int dir){ board[row][col].setDirectionOfShip(dir); }
+    public void setLengthOfBoat(int row, int col, int length){ board[row][col].setShipLength(length); }
+    public void setDirectionOfBoat(int row, int col, int dir){ board[row][col].setShipDirection(dir); }
     public boolean hasShip(int row, int col)
     {
         return board[row][col].hasShip();
@@ -105,16 +105,16 @@ public class Board {
             for (int j = 0; j < NUM_COLS; j++) {
 
                 if (board[i][j].hasShip()) {
-                    if (board[i][j].getLengthOfShip() == 3) {
+                    if (board[i][j].getShipLength() == 3) {
                         System.out.print("T ");
                     }
-                    else if (board[i][j].getLengthOfShip() == 4) {
+                    else if (board[i][j].getShipLength() == 4) {
                         System.out.print("Q ");
                     }
-                    else if (board[i][j].getLengthOfShip() == 5) {
+                    else if (board[i][j].getShipLength() == 5) {
                         System.out.print("M ");
                     }
-                    else if (board[i][j].getLengthOfShip() == 6) {
+                    else if (board[i][j].getShipLength() == 6) {
                         System.out.print("S ");
                     }
                 }
@@ -139,19 +139,19 @@ public class Board {
                 if (board[i][j].checkHit())
                     System.out.print("X ");
                 else if (board[i][j].hasShip()) {
-                    if (board[i][j].getLengthOfShip() == 3)
+                    if (board[i][j].getShipLength() == 3)
                     {
                         System.out.print("T ");
                     }
-                    else if (board[i][j].getLengthOfShip() == 4)
+                    else if (board[i][j].getShipLength() == 4)
                     {
                         System.out.print("Q ");
                     }
-                    else if (board[i][j].getLengthOfShip() == 5)
+                    else if (board[i][j].getShipLength() == 5)
                     {
                         System.out.print("M ");
                     }
-                    else if (board[i][j].getLengthOfShip() == 6)
+                    else if (board[i][j].getShipLength() == 6)
                     {
                         System.out.print("S ");
                     }

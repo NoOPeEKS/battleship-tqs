@@ -6,13 +6,13 @@ public class Location {
   public static final int UNGUESSED = 0;
   public static final int MISSED = 2;
   public static final int HIT = 1;
-  
+
 
   private boolean hasShip;
   private int shipLength;
   private int shipDirection;
   private int status;
-  
+
 
   public Location() {
     status = 0;
@@ -65,9 +65,8 @@ public class Location {
     this.hasShip = bool;
   }
 
-  public void setStatus(int status)
-  {
-    if(status == HIT || status == MISSED)
+  public void setStatus(int status) {
+    if (status == HIT || status == MISSED)
       this.status = status;
     else
       this.status = UNGUESSED;
@@ -75,4 +74,6 @@ public class Location {
 
   public int getStatus() {
     return status;
-  
+  }
+
+}
