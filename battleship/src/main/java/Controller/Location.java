@@ -1,75 +1,78 @@
 package Controller;
 
+
 public class Location {
-    public static final int UNGUESSED = 0;
-    public static final int HIT = 1;
-    public static final int MISSED = 2;
 
-    private boolean hasShip;
-    private int status;
-    private int lengthOfShip;
-    private int directionOfShip;
+  public static final int UNGUESSED = 0;
+  public static final int MISSED = 2;
+  public static final int HIT = 1;
+  
 
-    public Location() {
-        this.status = 0;
-        this.hasShip = false;
-        this.lengthOfShip = -1;
-        this.directionOfShip = -1;
-    }
+  private boolean hasShip;
+  private int shipLength;
+  private int shipDirection;
+  private int status;
+  
 
-    public boolean checkHit() {
-        return status == HIT;
-    }
+  public Location() {
+    status = 0;
+    hasShip = false;
+    shipLength = -1;
+    shipDirection = -1;
+  }
 
-    public boolean checkMiss() {
-        return status == MISSED;
-    }
+  public boolean checkHit() {
+    return status == HIT;
+  }
 
-    public boolean isUnguessed() {
-        return status == UNGUESSED;
-    }
+  public boolean checkMiss() {
+    return status == MISSED;
+  }
 
-    public void markHit() {
-        setStatus(HIT);
-    }
+  public boolean isUnguessed() {
+    return status == UNGUESSED;
+  }
 
-    public void markMiss() {
-        setStatus(MISSED);
-    }
+  public int getShipDirection() {
+    return shipDirection;
+  }
 
-    public boolean hasShip() {
-        return hasShip;
-    }
+  public void setShipDirection(int val) {
+    shipDirection = val;
+  }
 
-    public void setShip(Boolean bool) {
-        this.hasShip = bool;
-    }
+  public int getShipLength() {
+    return shipLength;
+  }
 
-    public void setStatus(int status)
-    {
-        if(status == HIT || status == MISSED)
-            this.status = status;
-        else
-            this.status = UNGUESSED;
-    }
+  public void setShipLength(int val) {
+    shipLength = val;
+  }
 
-    public int getStatus() {
-        return status;
-    }
+  public void markHit() {
+    setStatus(HIT);
+  }
 
-    public int getLengthOfShip() {
-        return lengthOfShip;
-    }
+  public void markMiss() {
+    setStatus(MISSED);
+  }
 
-    public void setLengthOfShip(int val) {
-        lengthOfShip = val;
-    }
+  public boolean hasShip() {
+    return hasShip;
+  }
 
-    public int getDirectionOfShip() {
-        return directionOfShip;
-    }
+  public void setShip(Boolean bool) {
+    this.hasShip = bool;
+  }
 
-    public void setDirectionOfShip(int val) {
-        directionOfShip = val;
-    }
-}
+  public void setStatus(int status)
+  {
+    if(status == HIT || status == MISSED)
+      this.status = status;
+    else
+      this.status = UNGUESSED;
+  }
+
+  public int getStatus() {
+    return status;
+  
