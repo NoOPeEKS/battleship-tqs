@@ -25,6 +25,7 @@ public class Boat {
 
     public void setDirection(int direction) { this.direction = direction; }
     public int getDirection() { return this.direction; }
+    public boolean isLocationSet() { return coordX != NOT_SET && coordY != NOT_SET; }
     public boolean isDirectionSet() { return direction != NOT_SET; }
     public int getLength() { return this.length; }
     public int getCoordX() { return this.coordX; }
